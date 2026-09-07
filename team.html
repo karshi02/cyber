@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บุคลากร | CYBER SECURITY RMU</title>
+<meta name="description" content="ทำเนียบบุคลากร หน่วยงานความมั่นคงปลอดภัยไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม">
+<link rel="canonical" href="https://cybersecurity.rmu.ac.th/team.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="theme-color" content="#1a73c7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/components.css">
+<link rel="stylesheet" href="assets/theme.css">
+<script>
+  // apply the saved theme before first paint (no flash of the wrong theme)
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="assets/org.css">
+<script>
+  // set before first paint so the gate never flashes
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) document.documentElement.classList.add('gate');
+  })();
+</script>
+<script src="assets/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+<div id="gate" role="status" aria-label="กำลังเปิดทำเนียบบุคลากร">
+  <div class="pane top"></div>
+  <div class="pane bot"></div>
+  <div class="core">
+    <div class="gate-box">
+      <svg class="gate-lock" viewBox="0 0 64 64" aria-hidden="true">
+        <path class="ring" d="M32 5 55 18v28L32 59 9 46V18z"/>
+        <path class="shackle" d="M25 33v-5a7 7 0 0 1 14 0v5"/>
+        <rect class="body" x="21" y="32" width="22" height="17" rx="3.4"/>
+        <circle class="keyhole" cx="32" cy="39" r="2.3"/>
+        <rect class="keyhole" x="31" y="40" width="2" height="5" rx="1"/>
+      </svg>
+      <p class="gate-title">กำลังเปิดทำเนียบบุคลากร</p>
+      <p class="gate-sub" id="gateSub">verifying access</p>
+      <div class="gate-track"><i id="gateBar"></i></div>
+      <div class="gate-steps" id="gateSteps"><b></b><b></b><b></b><b></b></div>
+    </div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>โทร. 0-4372-2118 &nbsp;|&nbsp; cybersecurity@rmu.ac.th</span>
+    <nav class="topbar-links">
+      <a href="index.html#contact">ติดต่อเรา</a>
+    </nav>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img class="logo" src="favicon.svg" width="42" height="42" alt="โลโก้ Cyber Security RMU">
+      <div class="brand-text">
+        <b>CYBER SECURITY</b>
+        <span class="type" data-words="ความมั่นคงปลอดภัยไซเบอร์ · RMU|Cyber Security · RMU" aria-label="ความมั่นคงปลอดภัยไซเบอร์ · RMU"></span>
+      </div>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html">หน้าหลัก</a>
+      <a href="index.html#about">เกี่ยวกับเรา</a>
+      <a href="index.html#services">บริการ</a>
+      <a href="team.html" aria-current="page">บุคลากร</a>
+      <a href="guides.html">คู่มือ</a>
+      <a href="index.html#training">อบรม</a>
+      <a href="index.html#contact">ติดต่อ</a>
+    </nav>
+    <a class="btn btn-primary" href="guides.html">คู่มือการใช้งาน <span class="rec">แนะนำ</span></a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="สลับโหมดมืด">
+      <span class="ico sun" aria-hidden="true">☀</span>
+      <span class="ico moon" aria-hidden="true">☾</span>
+      <span class="knob" aria-hidden="true" id="themeKnob">ON</span>
+      <span class="lbl" id="themeLabel">light</span>
+    </button>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-controls="menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:34px">
+        <span class="tag">Organization</span>
+        <h2>โครงสร้างหน่วยงาน</h2>
+        <p>คลิกที่การ์ดบุคลากรเพื่อดูรายละเอียด · ตำแหน่งที่ยังไม่มีผู้รับผิดชอบแสดงเป็นกรอบเส้นประตามโครงสร้างเป้าหมาย</p>
+      </div>
+
+      <p class="org-hint">← เลื่อนซ้าย–ขวาเพื่อดูผังทั้งหมด →</p>
+
+      <div class="org-wrap">
+        <div class="org">
+
+          <button class="org-card primary" type="button" data-person="p1">
+            <span class="pic"><img src="imgs/songphon.jpg" alt="ผศ.ดร.ทรงพล นามคุณ" width="132" height="132"></span>
+            <span class="nm">ผศ.ดร.ทรงพล นามคุณ</span>
+            <span class="ps">รองหัวหน้าศูนย์ความปลอดภัยไซเบอร์</span>
+            <span class="mail" aria-hidden="true">✉</span>
+          </button>
+
+          <div class="org-stem"></div>
+
+          <button class="org-card" type="button" data-person="p2">
+            <span class="pic"><img src="imgs/wuttisak.png" alt="นายวุฒิศักดิ์ ชมดวงทิพย์" width="132" height="132"></span>
+            <span class="nm">นายวุฒิศักดิ์ ชมดวงทิพย์</span>
+            <span class="ps">นักวิชาการคอมพิวเตอร์ชำนาญการ</span>
+            <span class="mail" aria-hidden="true">✉</span>
+          </button>
+
+          <div class="org-stem"></div>
+
+          <ul class="org-row">
+            <li>
+              <div class="unit"><small>โครงสร้างเป้าหมาย · ยังไม่มีผู้รับผิดชอบ</small><b>งานเฝ้าระวังและรับมือภัยคุกคาม</b></div>
+              <div class="org-sub"></div>
+              <div class="org-card vacant">
+                <span class="pic">—</span>
+                <span class="nm">ยังไม่มีผู้รับผิดชอบ</span>
+                <span class="ps">อยู่ระหว่างสรรหา</span>
+              </div>
+            </li>
+            <li>
+              <div class="unit"><small>โครงสร้างเป้าหมาย · ยังไม่มีผู้รับผิดชอบ</small><b>งานบริการระบบเครือข่ายและสื่อสาร</b></div>
+              <div class="org-sub"></div>
+              <div class="org-card vacant">
+                <span class="pic">—</span>
+                <span class="nm">ยังไม่มีผู้รับผิดชอบ</span>
+                <span class="ps">อยู่ระหว่างสรรหา</span>
+              </div>
+            </li>
+            <li>
+              <div class="unit"><small>โครงสร้างเป้าหมาย · ยังไม่มีผู้รับผิดชอบ</small><b>งานอบรมและสร้างความตระหนักรู้</b></div>
+              <div class="org-sub"></div>
+              <div class="org-card vacant">
+                <span class="pic">—</span>
+                <span class="nm">ยังไม่มีผู้รับผิดชอบ</span>
+                <span class="ps">อยู่ระหว่างสรรหา</span>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ---------- person details ---------- -->
+<template id="p1">
+  <div class="modal-head">
+    <div class="avatar photo lg"><img src="imgs/songphon.jpg" alt="ผศ.ดร.ทรงพล นามคุณ" width="92" height="92"></div>
+    <div class="modal-title">
+      <span class="person-role">รองหัวหน้าศูนย์ความปลอดภัยไซเบอร์</span>
+      <h3 class="person-name" style="font-size:21px">ผศ.ดร.ทรงพล นามคุณ</h3>
+      <span class="person-sub">ปร.ด. วิศวกรรมคอมพิวเตอร์</span>
+    </div>
+    <button class="modal-close" type="button" data-close aria-label="ปิด">✕</button>
+  </div>
+  <div class="modal-body">
+    <h4>ข้อมูลติดต่อ</h4>
+    <dl class="kv">
+      <div class="kv-row"><dt>ตำแหน่ง</dt><dd>รองหัวหน้าศูนย์ความปลอดภัยไซเบอร์</dd></div>
+      <div class="kv-row"><dt>วุฒิการศึกษา</dt><dd>ปร.ด. (วิศวกรรมคอมพิวเตอร์)</dd></div>
+      <div class="kv-row"><dt>อีเมล</dt><dd><a href="mailto:songphon@rmu.ac.th">songphon@rmu.ac.th</a></dd></div>
+      <div class="kv-row"><dt>โทรศัพท์</dt><dd>0-4372-2118 ต่อ 000</dd></div>
+    </dl>
+    <h4>ภาระงาน</h4>
+    <ul>
+      <li>กำกับดูแลงานความมั่นคงปลอดภัยไซเบอร์ของมหาวิทยาลัย</li>
+      <li>วางนโยบายและมาตรการป้องกันภัยคุกคามทางไซเบอร์</li>
+      <li>ที่ปรึกษาด้านความปลอดภัยของระบบสารสนเทศและเครือข่าย</li>
+      <li>สอนและพัฒนาหลักสูตรด้านวิศวกรรมคอมพิวเตอร์และความปลอดภัยไซเบอร์</li>
+    </ul>
+    <p class="note" style="margin-top:18px">ข้อมูลบางส่วนอยู่ระหว่างปรับปรุง หากต้องการรายละเอียดเพิ่มเติม ติดต่อได้ที่อีเมลข้างต้น</p>
+  </div>
+</template>
+
+<template id="p2" data-fx="b">
+  <div class="modal-head">
+    <div class="avatar photo lg"><img src="imgs/wuttisak.png" alt="นายวุฒิศักดิ์ ชมดวงทิพย์" width="92" height="92"></div>
+    <div class="modal-title">
+      <span class="person-role">นักวิชาการคอมพิวเตอร์ชำนาญการ</span>
+      <h3 class="person-name" style="font-size:21px">นายวุฒิศักดิ์ ชมดวงทิพย์</h3>
+      <span class="person-sub">ชื่อเล่น: ป๊อป · งานบริการระบบเครือข่ายและสื่อสาร</span>
+    </div>
+    <button class="modal-close" type="button" data-close aria-label="ปิด">✕</button>
+  </div>
+  <div class="modal-body">
+    <h4>ข้อมูลทั่วไป</h4>
+    <dl class="kv">
+      <div class="kv-row"><dt>ตำแหน่ง</dt><dd>นักวิชาการคอมพิวเตอร์ชำนาญการ</dd></div>
+      <div class="kv-row"><dt>สังกัด</dt><dd>งานบริการระบบเครือข่ายและสื่อสาร ศูนย์เทคโนโลยีดิจิทัลและนวัตกรรม</dd></div>
+      <div class="kv-row"><dt>ความเชี่ยวชาญ</dt><dd>ระบบเครือข่ายสารสนเทศ ระบบเซิร์ฟเวอร์ และ IPv6</dd></div>
+    </dl>
+    <h4>ภาระงาน</h4>
+    <ul>
+      <li>รับผิดชอบงานบริการระบบเครือข่ายและเทคโนโลยีสารสนเทศของมหาวิทยาลัย</li>
+      <li>ได้รับแต่งตั้งให้ปฏิบัติหน้าที่ในการประชุมสภามหาวิทยาลัยราชภัฏมหาสารคาม</li>
+    </ul>
+    <h4>ผลงานที่โดดเด่น</h4>
+    <ul>
+      <li>เจ้าหน้าที่ผู้รับผิดชอบหลักที่นำศูนย์คอมพิวเตอร์ มรม. คว้ารางวัลการพัฒนาเครือข่ายอินเทอร์เน็ตพื้นฐานรองรับ IPv6 ระดับดีเด่น</li>
+      <li>วิทยากรให้ความรู้แก่ผู้เข้าเยี่ยมชมห้องเซิร์ฟเวอร์ (Server Room) ของมหาวิทยาลัย</li>
+    </ul>
+    <p class="note warn" style="margin-top:18px"><b>หมายเหตุ:</b> ข้อมูลภาพรวมนี้เรียบเรียงจากแหล่งข้อมูลสาธารณะ (เว็บไซต์มหาวิทยาลัยและเพจหน่วยงาน) โปรดตรวจสอบความถูกต้องกับหน่วยงานต้นสังกัดอีกครั้ง</p>
+  </div>
+</template>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="ข้อมูลบุคลากร">
+  <div class="modal-shell">
+    <button class="modal-nav prev" type="button" id="modalPrev" aria-label="คนก่อนหน้า">‹</button>
+    <div class="modal-box" id="modalBox"></div>
+    <button class="modal-nav next" type="button" id="modalNext" aria-label="คนถัดไป">›</button>
+    <div class="modal-count" id="modalCount"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>CYBER SECURITY RMU</h4>
+        <p style="margin:0; opacity:.85">ความมั่นคงปลอดภัยไซเบอร์<br>มหาวิทยาลัยราชภัฏมหาสารคาม</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html#about">เกี่ยวกับเรา</a></li>
+          <li><a href="team.html">บุคลากร</a></li>
+          <li><a href="guides.html">คู่มือการใช้งาน</a></li>
+          <li><a href="index.html#manuals">คู่มือการใช้งาน</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ลิงก์ที่เกี่ยวข้อง</h4>
+        <ul>
+          <li><a href="https://www.ncsa.or.th/" target="_blank" rel="noopener">สกมช. (NCSA)</a></li>
+          <li><a href="https://cc.rmu.ac.th/" target="_blank" rel="noopener">ศูนย์เทคโนโลยีดิจิทัลและนวัตกรรม</a></li>
+          <li><a href="https://www.rmu.ac.th" target="_blank" rel="noopener">มหาวิทยาลัยราชภัฏมหาสารคาม</a></li>
+          <li><a href="index.html#contact">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2569 Cyber Security — มหาวิทยาลัยราชภัฏมหาสารคาม สงวนลิขสิทธิ์</div>
+  </div>
+</footer>
+</body>
+</html>

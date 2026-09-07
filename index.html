@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CYBER SECURITY RMU | ความมั่นคงปลอดภัยไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม</title>
+<meta name="description" content="Cyber Security RMU — ความมั่นคงปลอดภัยไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม บริการ คู่มือการใช้งานระบบ บุคลากร และช่องทางแจ้งเหตุ">
+<link rel="canonical" href="https://cybersecurity.rmu.ac.th/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cyber Security RMU">
+<meta property="og:title" content="CYBER SECURITY RMU | ความมั่นคงปลอดภัยไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม">
+<meta property="og:description" content="บริการ คู่มือการใช้งานระบบ บุคลากร และช่องทางแจ้งเหตุไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม">
+<meta property="og:url" content="https://cybersecurity.rmu.ac.th/">
+<meta property="og:image" content="https://cybersecurity.rmu.ac.th/favicon.svg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="theme-color" content="#1a73c7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/components.css">
+<link rel="stylesheet" href="assets/theme.css">
+<script>
+  // apply the saved theme before first paint (no flash of the wrong theme)
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<script>
+  // set before first paint so the overlay never flashes in or out
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) document.documentElement.classList.add('boot');
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cyber Security RMU",
+  "alternateName": "หน่วยงานความมั่นคงปลอดภัยไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม",
+  "url": "https://cybersecurity.rmu.ac.th/",
+  "parentOrganization": {"@type": "CollegeOrUniversity", "name": "มหาวิทยาลัยราชภัฏมหาสารคาม", "url": "https://www.rmu.ac.th"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "80 ถ.นครสวรรค์ ต.ตลาด",
+    "addressLocality": "อ.เมือง",
+    "addressRegion": "มหาสารคาม",
+    "postalCode": "44000",
+    "addressCountry": "TH"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "technical support",
+    "telephone": "+66-43-722118",
+    "email": "cybersecurity@rmu.ac.th",
+    "availableLanguage": ["th", "en"]
+  }]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+<div id="boot" role="status" aria-label="กำลังเข้าสู่ระบบ">
+  <div class="boot-box">
+    <div class="boot-mark">
+      <img src="favicon.svg" width="40" height="40" alt="">
+      <b id="bootTitle">CYBER SECURITY</b>
+    </div>
+    <div class="boot-log" id="bootLog"></div>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+    <div class="boot-pct"><span>secure channel</span><span id="bootPct">0%</span></div>
+  </div>
+  <div class="boot-skip">กดที่ใดก็ได้เพื่อข้าม</div>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><a href="tel:+6643722118">โทร. 0-4372-2118</a> &nbsp;|&nbsp; <a href="mailto:cybersecurity@rmu.ac.th">cybersecurity@rmu.ac.th</a></span>
+    <nav class="topbar-links">
+      <a href="#contact">ติดต่อเรา</a>
+    </nav>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img class="logo" src="favicon.svg" width="42" height="42" alt="โลโก้ Cyber Security RMU">
+      <div class="brand-text">
+        <b>CYBER SECURITY</b>
+        <span class="type" data-words="ความมั่นคงปลอดภัยไซเบอร์ · RMU|Cyber Security · RMU" aria-label="ความมั่นคงปลอดภัยไซเบอร์ · RMU"></span>
+      </div>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html">หน้าหลัก</a>
+      <a href="#about">เกี่ยวกับเรา</a>
+      <a href="#services">บริการ</a>
+      <a href="team.html">บุคลากร</a>
+      <a href="guides.html">คู่มือ</a>
+      <a href="#training">อบรม</a>
+      <a href="#incident">แจ้งเหตุ</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="สลับโหมดมืด">
+      <span class="ico sun" aria-hidden="true">☀</span>
+      <span class="ico moon" aria-hidden="true">☾</span>
+      <span class="knob" aria-hidden="true" id="themeKnob">ON</span>
+      <span class="lbl" id="themeLabel">light</span>
+    </button>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-controls="menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Cyber Security · RMU</span>
+        <h1>ความมั่นคงปลอดภัยไซเบอร์<br>มหาวิทยาลัยราชภัฏมหาสารคาม</h1>
+        <p>ดูแลระบบให้ปลอดภัย เฝ้าระวังภัยคุกคาม และสร้างความตระหนักรู้ด้านไซเบอร์ ให้นักศึกษา บุคลากร และชุมชนท้องถิ่น</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services">ดูบริการทั้งหมด</a>
+          <a class="btn btn-ghost" href="guides.html">คู่มือการใช้งาน <span class="rec">แนะนำ</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Services</span>
+        <h2>บริการของเรา</h2>
+        <p>ครอบคลุมความปลอดภัยของระบบ โครงสร้างพื้นฐานดิจิทัล และการพัฒนาทักษะไซเบอร์ของบุคลากรและนักศึกษา</p>
+      </div>
+      <div class="grid-3">
+        <article class="card"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M16 9.5v6"/><path stroke d="M13.6 17.6 8.4 21"/><path stroke d="M18.4 17.6 23.6 21"/><circle stroke cx="16" cy="7" r="2.6"/><circle stroke cx="6.5" cy="23" r="2.6"/><circle stroke cx="25.5" cy="23" r="2.6"/><path stroke class="ac" d="M10.5 4.2A9.4 9.4 0 0 1 21.5 4.2"/></svg></div><h3>เครือข่ายและอินเทอร์เน็ต</h3><p>ดูแลระบบเครือข่ายภายในมหาวิทยาลัย Wi-Fi และบัญชีผู้ใช้อินเทอร์เน็ต</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><ellipse stroke cx="16" cy="8.5" rx="9" ry="3.5"/><path stroke d="M7 8.5v7c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-7"/><path stroke d="M7 15.5v7c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-7"/><circle class="ac-f" cx="20.5" cy="22.4" r="1.5"/></svg></div><h3>ระบบสารสนเทศ</h3><p>พัฒนาและดูแลระบบทะเบียน ระบบสารบรรณ และฐานข้อมูลกลางของมหาวิทยาลัย</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><rect stroke x="4" y="6" width="24" height="16" rx="3"/><path stroke d="M12 26h8"/><path stroke d="M16 22v4"/><path stroke d="M9 11.5h9"/><path stroke class="ac" d="M9 15.5h5"/><circle class="ac-f" cx="22" cy="15.5" r="1.6"/></svg></div><h3>ห้องเรียนดิจิทัล</h3><p>สนับสนุนห้องปฏิบัติการคอมพิวเตอร์ ห้องประชุมออนไลน์ และสื่อการสอนดิจิทัล</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M16 3.5 26 7.4v8.1c0 6.2-4.1 10.9-10 13-5.9-2.1-10-6.8-10-13V7.4z"/><circle stroke cx="16" cy="14.2" r="2.6"/><path stroke d="M16 16.8v4.4"/><path stroke class="ac" d="M11.8 11.2 9.4 9.6"/><path stroke class="ac" d="M20.2 11.2l2.4-1.6"/></svg></div><h3>ความมั่นคงปลอดภัยไซเบอร์</h3><p>เฝ้าระวังภัยคุกคาม ให้คำปรึกษา และสร้างความตระหนักรู้ด้านความปลอดภัย</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M13 4v8.4L6.8 23.1A2.6 2.6 0 0 0 9 27h14a2.6 2.6 0 0 0 2.2-3.9L19 12.4V4"/><path stroke d="M11.4 4h9.2"/><path stroke d="M10.2 19.5h11.6"/><circle class="ac-f" cx="14" cy="23" r="1.5"/><circle class="nd" cx="18.4" cy="23.6" r="1.1"/></svg></div><h3>นวัตกรรมและวิจัย</h3><p>ร่วมพัฒนาต้นแบบนวัตกรรมดิจิทัลกับคณะและหน่วยงานภายนอก</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><circle stroke cx="16" cy="7.6" r="3"/><circle stroke cx="7.5" cy="13.5" r="2.6"/><circle stroke cx="24.5" cy="13.5" r="2.6"/><path stroke class="ac" d="M13.4 9.4 9.8 12"/><path stroke class="ac" d="M18.6 9.4 22.2 12"/><path stroke d="M5.5 27c1.4-4.2 5.4-6.8 10.5-6.8S25.1 22.8 26.5 27"/></svg></div><h3>บริการวิชาการชุมชน</h3><p>ถ่ายทอดเทคโนโลยีและอบรมทักษะดิจิทัลให้โรงเรียนและชุมชนท้องถิ่น</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANUALS -->
+  <section class="news" id="manuals">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Manuals</span>
+        <h2>คู่มือการใช้งานทั้งหมด</h2>
+        <p>วิธีเข้าใช้งานระบบพื้นฐานของมหาวิทยาลัย สำหรับนักศึกษาและบุคลากร</p>
+      </div>
+      <div class="manual-grid">
+
+        <a class="manual" href="guides.html#eduroam">
+          <span class="manual-no">01</span>
+          <div class="manual-body">
+            <span class="pill">Wi-Fi</span>
+            <h3><svg class="ttl-ico" viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M4.5 12.5a17 17 0 0 1 23 0"/><path stroke d="M9 17.6a10.6 10.6 0 0 1 14 0"/><path stroke class="ac" d="M13.3 22.5a4.4 4.4 0 0 1 5.4 0"/><circle class="ac-f" cx="16" cy="27" r="2"/></svg><span>การใช้งานระบบ eduroam</span></h3>
+            <p>เชื่อมต่อ Wi-Fi ด้วยรหัสนักศึกษา@rmu.ac.th และเลขบัตรประชาชน 13 หลัก ใช้ได้ทั้งในและนอกมหาวิทยาลัย</p>
+            <span class="more">อ่านคู่มือ →</span>
+          </div>
+        </a>
+
+        <a class="manual" href="guides.html#vpn">
+          <span class="manual-no">02</span>
+          <div class="manual-body">
+            <span class="pill">Network</span>
+            <h3><svg class="ttl-ico" viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M16 3.5 26 7.4v8.1c0 6.2-4.1 10.9-10 13-5.9-2.1-10-6.8-10-13V7.4z"/><path stroke class="ac" d="M10.5 16h4l2.5-4 2.5 8 2-4h2"/></svg><span>การใช้งานระบบ VPN</span></h3>
+            <p>ติดตั้ง FortiClient VPN เชื่อมต่อ vpn.rmu.ac.th เพื่อเข้าถึงทรัพยากรภายในมหาวิทยาลัยจากที่ใดก็ได้</p>
+            <span class="more">อ่านคู่มือ →</span>
+          </div>
+        </a>
+
+        <a class="manual" href="guides.html#email">
+          <span class="manual-no">03</span>
+          <div class="manual-body">
+            <span class="pill">Email</span>
+            <h3><svg class="ttl-ico" viewBox="0 0 32 32" aria-hidden="true"><rect stroke x="4" y="7" width="24" height="18" rx="3"/><path stroke d="m5.5 9.5 9 6.6a2.6 2.6 0 0 0 3 0l9-6.6"/><circle class="ac-f" cx="24.5" cy="21.5" r="1.6"/></svg><span>การใช้งานอีเมลมหาวิทยาลัย</span></h3>
+            <p>บัญชี Office 365 และ Google สำหรับนักศึกษาและบุคลากร พร้อมวิธีรีเซตรหัสผ่านด้วยตนเอง</p>
+            <span class="more">อ่านคู่มือ →</span>
+          </div>
+        </a>
+
+        <a class="manual" href="guides.html#gateway">
+          <span class="manual-no">04</span>
+          <div class="manual-body">
+            <span class="pill">Access</span>
+            <h3><svg class="ttl-ico" viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M7 27V8a3 3 0 0 1 3-3h5"/><path stroke d="M25 27V8a3 3 0 0 0-3-3h-1"/><path stroke d="M4 27h24"/><circle stroke class="ac" cx="16" cy="16" r="3.2"/><path stroke class="ac" d="M19.2 16h5"/></svg><span>Authentication Gateway</span></h3>
+            <p>ยืนยันตัวตนก่อนเข้าใช้อินเทอร์เน็ตและระบบสารสนเทศภายในของมหาวิทยาลัย</p>
+            <span class="more">อ่านคู่มือ →</span>
+          </div>
+        </a>
+
+      </div>
+      <div class="center"><a class="btn btn-ghost" href="guides.html">เปิดหน้าคู่มือทั้งหมด</a></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap grid-2">
+      <div class="about-media campus-stage">
+        <svg class="campus" viewBox="0 0 460 360" role="img" aria-label="ภาพประกอบสามมิติ อาคารมหาวิทยาลัยราชภัฏมหาสารคาม">
+          <g class="grid" aria-hidden="true">
+            <line x1="-92" y1="400" x2="138" y2="240"/>
+            <line x1="-46" y1="400" x2="184" y2="240"/>
+            <line x1="0" y1="400" x2="230" y2="240"/>
+            <line x1="46" y1="400" x2="276" y2="240"/>
+            <line x1="92" y1="400" x2="322" y2="240"/>
+            <line x1="138" y1="400" x2="368" y2="240"/>
+            <line x1="184" y1="400" x2="414" y2="240"/>
+            <line x1="230" y1="400" x2="460" y2="240"/>
+            <line x1="276" y1="400" x2="506" y2="240"/>
+            <line x1="0" y1="290" x2="460" y2="160"/>
+            <line x1="0" y1="316" x2="460" y2="186"/>
+            <line x1="0" y1="342" x2="460" y2="212"/>
+            <line x1="0" y1="368" x2="460" y2="238"/>
+            <line x1="0" y1="394" x2="460" y2="264"/>
+            <line x1="0" y1="420" x2="460" y2="290"/>
+          </g>
+          <g class="block">
+            <ellipse cx="230" cy="284" rx="176" ry="52" class="shadow"/>
+            <polygon points="122.0,132.0 230.0,192.0 230.0,310.0 122.0,250.0" class-="face-l"/>
+            <polygon points="230.0,192.0 338.0,132.0 338.0,250.0 230.0,310.0" class-="face-r"/>
+            <polygon points="230.0,72.0 338.0,132.0 230.0,192.0 122.0,132.0" class-="roof"/>
+            <polygon points="135.0,155.2 149.0,163.0 149.0,183.0 135.0,175.2" class-="win lit" style="animation-delay:0.00s"/>
+            <polygon points="135.0,187.2 149.0,195.0 149.0,215.0 135.0,207.2" class-="win" style="animation-delay:0.90s"/>
+            <polygon points="135.0,219.2 149.0,227.0 149.0,247.0 135.0,239.2" class-="win" style="animation-delay:1.80s"/>
+            <polygon points="156.6,167.2 170.6,175.0 170.6,195.0 156.6,187.2" class-="win lit" style="animation-delay:2.70s"/>
+            <polygon points="156.6,199.2 170.6,207.0 170.6,227.0 156.6,219.2" class-="win" style="animation-delay:3.60s"/>
+            <polygon points="156.6,231.2 170.6,239.0 170.6,259.0 156.6,251.2" class-="win lit" style="animation-delay:4.50s"/>
+            <polygon points="178.2,179.2 192.2,187.0 192.2,207.0 178.2,199.2" class-="win" style="animation-delay:0.00s"/>
+            <polygon points="178.2,211.2 192.2,219.0 192.2,239.0 178.2,231.2" class-="win" style="animation-delay:0.90s"/>
+            <polygon points="178.2,243.2 192.2,251.0 192.2,271.0 178.2,263.2" class-="win lit" style="animation-delay:1.80s"/>
+            <polygon points="199.8,191.2 213.8,199.0 213.8,219.0 199.8,211.2" class-="win" style="animation-delay:2.70s"/>
+            <polygon points="199.8,223.2 213.8,231.0 213.8,251.0 199.8,243.2" class-="win lit" style="animation-delay:3.60s"/>
+            <polygon points="199.8,255.2 213.8,263.0 213.8,283.0 199.8,275.2" class-="win" style="animation-delay:4.50s"/>
+            <polygon points="243.0,200.8 257.0,193.0 257.0,213.0 243.0,220.8" class-="win lit" style="animation-delay:0.00s"/>
+            <polygon points="243.0,232.8 257.0,225.0 257.0,245.0 243.0,252.8" class-="win" style="animation-delay:0.90s"/>
+            <polygon points="243.0,264.8 257.0,257.0 257.0,277.0 243.0,284.8" class-="win" style="animation-delay:1.80s"/>
+            <polygon points="264.6,188.8 278.6,181.0 278.6,201.0 264.6,208.8" class-="win lit" style="animation-delay:2.70s"/>
+            <polygon points="264.6,220.8 278.6,213.0 278.6,233.0 264.6,240.8" class-="win" style="animation-delay:3.60s"/>
+            <polygon points="264.6,252.8 278.6,245.0 278.6,265.0 264.6,272.8" class-="win lit" style="animation-delay:4.50s"/>
+            <polygon points="286.2,176.8 300.2,169.0 300.2,189.0 286.2,196.8" class-="win" style="animation-delay:0.00s"/>
+            <polygon points="286.2,208.8 300.2,201.0 300.2,221.0 286.2,228.8" class-="win" style="animation-delay:0.90s"/>
+            <polygon points="286.2,240.8 300.2,233.0 300.2,253.0 286.2,260.8" class-="win lit" style="animation-delay:1.80s"/>
+            <polygon points="307.8,164.8 321.8,157.0 321.8,177.0 307.8,184.8" class-="win" style="animation-delay:2.70s"/>
+            <polygon points="307.8,196.8 321.8,189.0 321.8,209.0 307.8,216.8" class-="win lit" style="animation-delay:3.60s"/>
+            <polygon points="307.8,228.8 321.8,221.0 321.8,241.0 307.8,248.8" class-="win" style="animation-delay:4.50s"/>
+            <polygon points="276.0,258.0 310.0,239.0 310.0,273.0 276.0,292.0" class-="door"/>
+            <polygon points="196.0,91.0 230.0,72.0 264.0,91.0 230.0,110.0" class-="roof2"/>
+            <polygon points="196.0,91.0 230.0,110.0 230.0,128.0 196.0,109.0" class-="face-l"/>
+            <polygon points="230.0,110.0 264.0,91.0 264.0,109.0 230.0,128.0" class-="face-r"/>
+            <line x1="230" y1="82" x2="230" y2="30" class="mast"/>
+            <circle cx="230" cy="28" r="5" class="beacon"/>
+          </g>
+        </svg>
+        <span class="campus-cap">อาคารมหาวิทยาลัยราชภัฏมหาสารคาม</span>
+      </div>
+      <div class="about-body">
+        <span class="tag">About</span>
+        <h2>เกี่ยวกับเรา</h2>
+        <p>หน่วยงานด้านความมั่นคงปลอดภัยไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม ดูแลความปลอดภัยของระบบและข้อมูล เฝ้าระวังภัยคุกคาม พร้อมส่งเสริมทักษะดิจิทัลและความตระหนักรู้ด้านไซเบอร์ให้กับนักศึกษา บุคลากร และชุมชน</p>
+        <ul class="checks">
+          <li><i>✓</i><span>เฝ้าระวังและรับมือภัยคุกคามไซเบอร์</span></li>
+          <li><i>✓</i><span>โครงสร้างพื้นฐานดิจิทัลที่มั่นคงและปลอดภัย</span></li>
+          <li><i>✓</i><span>พัฒนาทักษะไซเบอร์ตามมาตรฐานสากล</span></li>
+          <li><i>✓</i><span>บริการวิชาการเพื่อพัฒนาท้องถิ่น</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">ติดต่อเรา</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INCIDENT -->
+  <section id="incident">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Report</span>
+        <h2>แจ้งเหตุภัยคุกคามไซเบอร์</h2>
+        <p>พบอีเมลหลอกลวง บัญชีถูกขโมย ไฟล์เรียกค่าไถ่ หรือข้อมูลรั่วไหล แจ้งได้ทันทีตามช่องทางด้านล่าง</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>เหตุที่ควรแจ้ง</h3>
+          <ul class="checks" style="margin-bottom:0">
+            <li><i>›</i><span>อีเมล/ข้อความหลอกลวง (Phishing)</span></li>
+            <li><i>›</i><span>บัญชีผู้ใช้ถูกเข้าถึงโดยผู้อื่น</span></li>
+            <li><i>›</i><span>มัลแวร์ หรือไฟล์เรียกค่าไถ่ (Ransomware)</span></li>
+            <li><i>›</i><span>ข้อมูลส่วนบุคคลรั่วไหล</span></li>
+            <li><i>›</i><span>เว็บไซต์/ระบบของมหาวิทยาลัยถูกโจมตี</span></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>ข้อมูลที่ควรเตรียม</h3>
+          <ul class="checks" style="margin-bottom:0">
+            <li><i>›</i><span>วันเวลาที่พบเหตุ</span></li>
+            <li><i>›</i><span>ภาพหน้าจอ หรืออีเมลต้นฉบับ (ไม่ต้องลบ)</span></li>
+            <li><i>›</i><span>บัญชี/อุปกรณ์ที่เกี่ยวข้อง</span></li>
+            <li><i>›</i><span>สิ่งที่ทำไปแล้ว เช่น กดลิงก์ กรอกรหัสผ่าน</span></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>ช่องทางแจ้ง</h3>
+          <p style="margin-bottom:14px">ในวันและเวลาราชการ จันทร์–ศุกร์ 08.30–16.30 น.</p>
+          <p style="margin-bottom:8px"><a href="mailto:cybersecurity@rmu.ac.th?subject=แจ้งเหตุภัยคุกคามไซเบอร์">cybersecurity@rmu.ac.th</a></p>
+          <p style="margin-bottom:14px"><a href="tel:+6643722118">0-4372-2118</a></p>
+          <div class="note warn" style="margin:0">หากสงสัยว่าบัญชีถูกขโมย ให้<b>เปลี่ยนรหัสผ่านทันที</b>ก่อนแจ้ง แล้วแจ้งภายในวันเดียวกัน</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING / CTA -->
+  <section class="cta" id="training">
+    <div class="wrap">
+      <h2>อบรมด้านความปลอดภัยไซเบอร์</h2>
+      <p>หน่วยงานจัดอบรมให้นักศึกษาและบุคลากรตามรอบที่ประกาศ ยังไม่มีรอบที่เปิดรับสมัครในขณะนี้ หน่วยงานที่ต้องการจัดอบรมเฉพาะกลุ่ม ติดต่อสอบถามได้</p>
+      <a class="btn btn-light" href="mailto:cybersecurity@rmu.ac.th?subject=สอบถามการอบรมด้านความปลอดภัยไซเบอร์">สอบถามการอบรม</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Contact</span>
+        <h2>ติดต่อเรา</h2>
+        <p>เปิดให้บริการวันจันทร์–ศุกร์ เวลา 08.30–16.30 น. (เว้นวันหยุดราชการ)</p>
+      </div>
+      <div class="contact-grid">
+        <div class="info">
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M16 28c5.3-6.4 8-11 8-14a8 8 0 1 0-16 0c0 3 2.7 7.6 8 14z"/><circle class="ac-f" cx="16" cy="13.4" r="2.8"/></svg></div><div><b>ที่อยู่</b><span>หน่วยงานความมั่นคงปลอดภัยไซเบอร์ มหาวิทยาลัยราชภัฏมหาสารคาม<br>80 ถ.นครสวรรค์ ต.ตลาด อ.เมือง จ.มหาสารคาม 44000</span></div></div>
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M12.4 5.5h-3A3 3 0 0 0 6.5 9c.6 8.9 7.6 15.9 16.5 16.5a3 3 0 0 0 3.5-2.9v-3l-5.2-2-2.3 2.6a17.6 17.6 0 0 1-6.6-6.6l2.6-2.3z"/><path stroke class="ac" d="M20.5 6.5a7.5 7.5 0 0 1 5 5"/></svg></div><div><b>โทรศัพท์</b><span><a href="tel:+6643722118">0-4372-2118</a></span></div></div>
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><rect stroke x="4" y="7" width="24" height="18" rx="3"/><path stroke d="m5.5 9.5 9 6.6a2.6 2.6 0 0 0 3 0l9-6.6"/><circle class="ac-f" cx="24.5" cy="21.5" r="1.6"/></svg></div><div><b>อีเมล</b><span><a href="mailto:cybersecurity@rmu.ac.th">cybersecurity@rmu.ac.th</a></span></div></div>
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path stroke d="M6 6h13a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-6l-5 4v-4H6a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3z"/><path stroke class="ac" d="M25 12h1a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-1v4l-4.5-4H17"/></svg></div><div><b>โซเชียล</b><span>อยู่ระหว่างเปิดช่องทาง Facebook และ Line Official<br>ระหว่างนี้ติดต่อทางโทรศัพท์หรืออีเมลด้านบน</span></div></div>
+        </div>
+        <div class="map">
+          <iframe
+            title="แผนที่ Cyber Security มหาวิทยาลัยราชภัฏมหาสารคาม"
+            src="https://www.google.com/maps?q=16.2000042,103.2722002&hl=th&z=16&output=embed"
+            width="100%" height="100%" style="border:0; min-height:320px; display:block"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>CYBER SECURITY RMU</h4>
+        <p style="margin:0; opacity:.85">ความมั่นคงปลอดภัยไซเบอร์<br>มหาวิทยาลัยราชภัฏมหาสารคาม</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="#about">เกี่ยวกับเรา</a></li>
+          <li><a href="team.html">บุคลากร</a></li>
+          <li><a href="guides.html">คู่มือการใช้งาน</a></li>
+          <li><a href="#manuals">คู่มือการใช้งาน</a></li>
+          <li><a href="#incident">แจ้งเหตุไซเบอร์</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ลิงก์ที่เกี่ยวข้อง</h4>
+        <ul>
+          <li><a href="https://www.ncsa.or.th/" target="_blank" rel="noopener">สกมช. (NCSA)</a></li>
+          <li><a href="https://cc.rmu.ac.th/" target="_blank" rel="noopener">ศูนย์เทคโนโลยีดิจิทัลและนวัตกรรม</a></li>
+          <li><a href="https://www.rmu.ac.th" target="_blank" rel="noopener">มหาวิทยาลัยราชภัฏมหาสารคาม</a></li>
+          <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2569 Cyber Security — มหาวิทยาลัยราชภัฏมหาสารคาม สงวนลิขสิทธิ์</div>
+  </div>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>

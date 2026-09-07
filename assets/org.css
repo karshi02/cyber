@@ -1,0 +1,72 @@
+/* ================= org chart ================= */
+.org-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:8px}
+.org{min-width:940px; display:flex; flex-direction:column; align-items:center; margin:0 auto}
+
+/* --- nodes --- */
+.org-card{position:relative; width:270px; border-radius:16px; border:1px solid var(--line);
+  background:#fff; padding:24px 20px 20px; text-align:center; transition:.2s; cursor:pointer;
+  font:inherit; color:inherit; display:block}
+.org-card:hover{border-color:var(--brand); box-shadow:var(--shadow)}
+.org-card:focus-visible{outline:2px solid var(--brand); outline-offset:3px}
+.org-card .pic{width:132px; height:132px; margin:0 auto 16px; border-radius:50%; overflow:hidden;
+  background:var(--bg-2); border:6px solid #eef2f7; display:grid; place-items:center;
+  color:#a9b2c0; font-weight:700; font-size:26px}
+.org-card .pic img{width:100%; height:100%; object-fit:cover; object-position:50% 14%; display:block}
+.org-card .nm{display:block; font-weight:700; font-size:17px; line-height:1.5; color:var(--brand)}
+.org-card .ps{display:block; font-size:14px; color:var(--ink-2); margin-top:2px}
+.org-card .mail{display:inline-grid; place-items:center; width:26px; height:26px; margin-top:10px;
+  border-radius:6px; background:var(--brand-soft); color:var(--brand); font-size:13px}
+
+/* filled variant for the top of the chart */
+.org-card.primary{background:var(--brand); border-color:var(--brand); color:#fff}
+.org-card.primary .nm{color:#fff}
+.org-card.primary .ps{color:#dbe9f8}
+.org-card.primary .pic{border-color:rgba(255,255,255,.35); background:rgba(255,255,255,.15)}
+.org-card.primary .mail{background:rgba(255,255,255,.2); color:#fff}
+.org-card.primary:hover{background:var(--brand-dark); border-color:var(--brand-dark)}
+
+/* vacant placeholder */
+.org-card.vacant{cursor:default; border-style:dashed; background:var(--bg-2)}
+.org-card.vacant:hover{border-color:var(--line); box-shadow:none}
+.org-card.vacant .nm{color:#aab1bd}
+
+/* unit bar (blue label above each column) */
+.unit{width:100%; border-radius:12px; background:var(--brand); color:#fff; padding:12px 16px; text-align:center}
+.unit small{display:block; font-size:12px; opacity:.85; margin-bottom:2px}
+.unit b{display:block; font-size:15px; line-height:1.45; font-weight:600}
+
+/* --- connectors --- */
+.org-stem{width:2px; height:34px; background:var(--line)}
+.org-row{list-style:none; margin:0; padding:0; display:flex; justify-content:center; align-items:flex-start; gap:26px}
+.org-row > li{position:relative; padding-top:34px; display:flex; flex-direction:column; align-items:center; gap:16px; width:270px}
+.org-row > li::before{content:""; position:absolute; top:0; left:50%; width:2px; height:34px; background:var(--line)}
+.org-row > li::after{content:""; position:absolute; top:0; left:-13px; right:-13px; height:2px; background:var(--line)}
+.org-row > li:first-child::after{left:50%}
+.org-row > li:last-child::after{right:50%}
+.org-row > li:only-child::after{display:none}
+.org-sub{width:2px; height:24px; background:var(--line)}
+
+@media (max-width:1000px){
+  .org{min-width:900px}
+}
+@media (max-width:940px){
+  .org-row{gap:18px}
+  .org-card,.org-row > li{width:240px}
+}
+/* phones: stack the chart instead of forcing a sideways scroll */
+@media (max-width:820px){
+  .org-wrap{overflow-x:visible}
+  .org{min-width:0; width:100%}
+  .org-card{width:100%; max-width:340px}
+  .org-row{flex-direction:column; align-items:center; gap:0; width:100%}
+  .org-row > li{width:100%; max-width:340px; padding-top:26px}
+  .org-row > li::after{display:none}          /* no horizontal bus when stacked */
+  .org-row > li::before{height:26px}
+  .org-hint{display:none}
+}
+@media (max-width:420px){
+  .org-card{padding:20px 16px 18px}
+  .org-card .pic{width:104px; height:104px; border-width:5px}
+  .org-card .nm{font-size:16px}
+}
+.org-hint{display:none; text-align:center; font-size:13px; color:var(--ink-2); margin-bottom:14px}

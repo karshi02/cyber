@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คู่มือการใช้งานระบบ | CYBER SECURITY RMU</title>
+<meta name="description" content="คู่มือการใช้งาน eduroam, VPN, อีเมลมหาวิทยาลัย และ Authentication Gateway มหาวิทยาลัยราชภัฏมหาสารคาม">
+<link rel="canonical" href="https://cybersecurity.rmu.ac.th/guides.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="theme-color" content="#1a73c7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/components.css">
+<link rel="stylesheet" href="assets/theme.css">
+<script>
+  // apply the saved theme before first paint (no flash of the wrong theme)
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<script>
+  // set before first paint so the gate never flashes
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) document.documentElement.classList.add('gate');
+  })();
+</script>
+<script src="assets/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+<div id="gate" role="status" aria-label="กำลังเปิดคู่มือ">
+  <div class="pane top"></div>
+  <div class="pane bot"></div>
+  <div class="core">
+    <div class="gate-box">
+      <svg class="gate-lock" viewBox="0 0 64 64" aria-hidden="true">
+        <path class="ring" d="M32 5 55 18v28L32 59 9 46V18z"/>
+        <path class="shackle" d="M25 33v-5a7 7 0 0 1 14 0v5"/>
+        <rect class="body" x="21" y="32" width="22" height="17" rx="3.4"/>
+        <circle class="keyhole" cx="32" cy="39" r="2.3"/>
+        <rect class="keyhole" x="31" y="40" width="2" height="5" rx="1"/>
+      </svg>
+      <p class="gate-title">กำลังเปิดคู่มือการใช้งาน</p>
+      <p class="gate-sub" id="gateSub">verifying access</p>
+      <div class="gate-track"><i id="gateBar"></i></div>
+      <div class="gate-steps" id="gateSteps"><b></b><b></b><b></b><b></b></div>
+    </div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>โทร. 0-4372-2118 &nbsp;|&nbsp; cybersecurity@rmu.ac.th</span>
+    <nav class="topbar-links">
+      <a href="index.html#contact">ติดต่อเรา</a>
+    </nav>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img class="logo" src="favicon.svg" width="42" height="42" alt="โลโก้ Cyber Security RMU">
+      <div class="brand-text">
+        <b>CYBER SECURITY</b>
+        <span class="type" data-words="ความมั่นคงปลอดภัยไซเบอร์ · RMU|Cyber Security · RMU" aria-label="ความมั่นคงปลอดภัยไซเบอร์ · RMU"></span>
+      </div>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html">หน้าหลัก</a>
+      <a href="index.html#about">เกี่ยวกับเรา</a>
+      <a href="index.html#services">บริการ</a>
+      <a href="team.html">บุคลากร</a>
+      <a href="guides.html" aria-current="page">คู่มือ</a>
+      <a href="index.html#training">อบรม</a>
+      <a href="index.html#contact">ติดต่อ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="สลับโหมดมืด">
+      <span class="ico sun" aria-hidden="true">☀</span>
+      <span class="ico moon" aria-hidden="true">☾</span>
+      <span class="knob" aria-hidden="true" id="themeKnob">ON</span>
+      <span class="lbl" id="themeLabel">light</span>
+    </button>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-controls="menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">หน้าแรก</a><span class="sep">/</span><span class="here">คู่มือการใช้งาน</span></div>
+      <h1>คู่มือการใช้งานระบบ</h1>
+      <p>วิธีเข้าใช้งานระบบพื้นฐานของมหาวิทยาลัยราชภัฏมหาสารคาม สำหรับนักศึกษาและบุคลากร — eduroam, VPN, อีเมลมหาวิทยาลัย และ Authentication Gateway</p>
+    </div>
+  </section>
+
+  <section class="guide-section">
+    <div class="wrap guide-layout">
+
+      <nav class="guide-nav" aria-label="สารบัญคู่มือ">
+        <a href="#eduroam">1. eduroam</a>
+        <a href="#vpn">2. VPN</a>
+        <a href="#email">3. อีเมลมหาวิทยาลัย</a>
+        <a href="#gateway">4. Authentication Gateway</a>
+        <div class="track" aria-hidden="true"><i id="guideProgress"></i></div>
+      </nav>
+
+      <div>
+
+        <!-- ---------- eduroam ---------- -->
+        <article class="guide-card" id="eduroam">
+          <span class="tag">Wi-Fi</span>
+          <h2>คู่มือการใช้งานระบบ eduroam</h2>
+          <p>eduroam (education roaming) คือบริการเครือข่ายไร้สายสำหรับสถาบันการศึกษาทั่วโลก เมื่อเชื่อมต่อสำเร็จที่มหาวิทยาลัยแล้ว สามารถใช้บัญชีเดิมเชื่อมต่อ Wi-Fi ในสถาบันสมาชิกอื่นได้ทันที</p>
+
+          <div class="guide-meta">
+            <span class="chip">นักศึกษา</span>
+            <span class="chip">บุคลากร</span>
+            <span class="chip">SSID: eduroam</span>
+          </div>
+
+          <h3 style="font-size:17px; margin:0 0 12px">ข้อมูลที่ใช้เข้าสู่ระบบ</h3>
+          <dl class="kv">
+            <div class="kv-row"><dt>ชื่อเครือข่าย (SSID)</dt><dd><code>eduroam</code></dd></div>
+            <div class="kv-row"><dt>Username</dt><dd>รหัสนักศึกษา ตามด้วย <code>@rmu.ac.th</code><br><span style="color:var(--ink-2); font-size:14px">ตัวอย่าง: <code>653170010101@rmu.ac.th</code></span></dd></div>
+            <div class="kv-row"><dt>Password</dt><dd>เลขบัตรประจำตัวประชาชน 13 หลัก</dd></div>
+          </dl>
+
+          <h3 style="font-size:17px; margin:22px 0 12px">ขั้นตอนการเชื่อมต่อ</h3>
+          <ol class="steps">
+            <li>เปิด Wi-Fi บนอุปกรณ์ แล้วเลือกเครือข่ายชื่อ <code>eduroam</code></li>
+            <li>กรอก Username เป็น <b>รหัสนักศึกษา@rmu.ac.th</b></li>
+            <li>กรอก Password เป็น <b>เลขบัตรประชาชน 13 หลัก</b></li>
+            <li>หากอุปกรณ์ถามวิธียืนยันตัวตน ให้เลือก EAP method: <code>PEAP</code> และ Phase-2: <code>MSCHAPV2</code></li>
+            <li>ช่อง CA certificate ให้เลือก <b>ใช้ใบรับรองของระบบ</b> (Use system certificates) และกรอก Domain / Server name เป็น <code>rmu.ac.th</code> — <b>ห้ามเลือก “Do not validate” หรือ “ไม่ตรวจสอบ”</b></li>
+            <li>กด เชื่อมต่อ (Connect) แล้วรอสถานะขึ้นว่าเชื่อมต่อแล้ว</li>
+          </ol>
+
+          <div class="note"><b>เชื่อมต่อไม่ได้?</b> ลบโปรไฟล์ eduroam เดิมออกจากอุปกรณ์แล้วเชื่อมต่อใหม่ ตรวจสอบว่าไม่มีช่องว่างท้าย Username และรหัสผ่านตรงกับเลขบัตรประชาชน หากยังไม่ได้ ติดต่อเจ้าหน้าที่</div>
+
+          <div class="note warn"><b>ห้ามปิดการตรวจสอบใบรับรอง:</b> การเลือก “ไม่ตรวจสอบ” ทำให้ผู้ไม่หวังดีตั้ง Wi-Fi ปลอมชื่อ <code>eduroam</code> แล้วดักบัญชีและรหัสผ่านของท่านได้ทันที หากอุปกรณ์เชื่อมต่อไม่ได้เมื่อตั้งค่าถูกต้อง ให้ติดต่อเจ้าหน้าที่ อย่าแก้ด้วยการปิดการตรวจสอบ · แนะนำให้ติดตั้งโปรไฟล์อัตโนมัติผ่าน <a href="https://cat.eduroam.org/" target="_blank" rel="noopener">eduroam CAT</a> หรือแอป geteduroam ซึ่งตั้งค่าใบรับรองให้ถูกต้องโดยไม่ต้องกรอกเอง</div>
+
+          <div class="note warn"><b>รหัสผ่านเริ่มต้น:</b> เลขบัตรประชาชนเป็นข้อมูลที่ผู้อื่นอาจรู้หรือคาดเดาได้ ให้เปลี่ยนรหัสผ่านทันทีหลังเข้าใช้งานครั้งแรก ตั้งรหัสที่ไม่ซ้ำกับระบบอื่น เปิดการยืนยันตัวตนสองชั้น (MFA) หากระบบรองรับ และไม่แชร์บัญชีให้ผู้อื่น</div>
+
+          <dl class="kv" style="margin-bottom:0">
+            <div class="kv-row"><dt>ผู้พัฒนา</dt><dd>นายวิทยา โพธิ์เกตุ</dd></div>
+          </dl>
+        </article>
+
+        <!-- ---------- VPN ---------- -->
+        <article class="guide-card" id="vpn">
+          <span class="tag">Network</span>
+          <h2>คู่มือการใช้งานระบบ VPN (RMU-SSLVPN)</h2>
+          <p>VPN (Virtual Private Network) หรือเครือข่ายส่วนตัวเสมือน ใช้เทคนิค tunneling บนอินเทอร์เน็ต ทำให้ไม่ว่าอยู่ที่ใดก็เสมือนใช้งานเครือข่ายภายในมหาวิทยาลัย เข้าถึงทรัพยากรที่จำกัดเฉพาะภายในได้ เช่น ฐานข้อมูลงานวิจัยของสำนักวิทยบริการ ระบบการเรียนการสอนออนไลน์ และระบบ MIS / E-DOC</p>
+
+          <div class="guide-meta">
+            <span class="chip">FortiClient VPN</span>
+            <span class="chip">SSL-VPN</span>
+            <span class="chip">Windows / macOS</span>
+          </div>
+
+          <h3 style="font-size:17px; margin:0 0 12px">ค่าที่ใช้ตั้งค่าการเชื่อมต่อ</h3>
+          <dl class="kv">
+            <div class="kv-row"><dt>VPN</dt><dd><code>SSL-VPN</code></dd></div>
+            <div class="kv-row"><dt>Connection Name</dt><dd><code>RMU-VPN</code></dd></div>
+            <div class="kv-row"><dt>Remote Gateway</dt><dd><code>vpn.rmu.ac.th</code></dd></div>
+            <div class="kv-row"><dt>Customize port</dt><dd><code>10443</code></dd></div>
+            <div class="kv-row"><dt>Authentication</dt><dd>Save login</dd></div>
+            <div class="kv-row"><dt>Username</dt><dd>บุคลากร: ชื่อภาษาอังกฤษ · นักศึกษา: รหัสนักศึกษา</dd></div>
+            <div class="kv-row"><dt>Password</dt><dd>เลขบัตรประจำตัวประชาชน</dd></div>
+          </dl>
+
+          <h3 style="font-size:17px; margin:22px 0 12px">ขั้นตอนการติดตั้งและใช้งาน</h3>
+          <ol class="steps">
+            <li>ดาวน์โหลดโปรแกรมที่ <a href="https://www.fortinet.com/support/product-downloads#vpn" target="_blank" rel="noopener">fortinet.com/support/product-downloads</a> เลือกหัวข้อ <b>FortiClient VPN</b> ไฟล์ชื่อ <code>FortiClientVPNOnlineInstaller.exe</code></li>
+            <li>เปิดตัวติดตั้ง โปรแกรมจะดาวน์โหลดไฟล์เพิ่มเติม รอจนครบ 100%</li>
+            <li>เลือก <em>Yes, I have read and accept the License Agreement</em> แล้วกด Next</li>
+            <li>กด Next จนถึงปุ่ม Install แล้วรอจนติดตั้งเสร็จ กด Finish</li>
+            <li>เปิดโปรแกรม เลือก <em>I acknowledge…</em> แล้วคลิก <em>I accept</em></li>
+            <li>คลิก <b>Configure VPN</b> แล้วกรอกค่าตามตารางด้านบนให้ครบ จากนั้นกด Save</li>
+            <li>เมื่อต้องการเข้าเครือข่ายมหาวิทยาลัย ใส่ Password แล้วคลิก <b>Connect</b></li>
+            <li>เมื่อเลิกใช้งาน คลิก <b>Disconnect</b> ทุกครั้ง</li>
+          </ol>
+
+          <div class="note warn"><b>รหัสผ่านเริ่มต้น:</b> ใช้เลขบัตรประชาชนเช่นเดียวกับระบบอื่น ให้เปลี่ยนรหัสผ่านทันทีที่เข้าใช้งานได้ และอย่าเลือก “Save login” บนเครื่องที่ใช้ร่วมกับผู้อื่น</div>
+
+          <div class="note"><b>ข้อตกลงการใช้งาน:</b> ใช้เพื่อการศึกษาค้นคว้าเท่านั้น ระบบบันทึกการใช้งานตาม พ.ร.บ. ว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์ฯ บัญชีผู้ใช้เป็นของส่วนตัว ห้ามแจกจ่ายให้ผู้อื่น เจ้าของบัญชีต้องรับผิดชอบผลที่เกิดขึ้นแต่เพียงผู้เดียว</div>
+        </article>
+
+        <!-- ---------- email ---------- -->
+        <article class="guide-card" id="email">
+          <span class="tag">Email</span>
+          <h2>คู่มือการใช้งานอีเมลมหาวิทยาลัย</h2>
+          <p>ระบบอีเมลของมหาวิทยาลัยรองรับทั้ง Microsoft Office 365 (<code>@lives.rmu.ac.th</code>) และ Google Workspace (<code>@rmu.ac.th</code>) สำหรับนักศึกษาและบุคลากร</p>
+
+          <h3 style="font-size:17px; margin:0 0 14px">สำหรับนักศึกษาใหม่</h3>
+          <div class="sub-grid">
+            <div class="sub-card">
+              <h3>Microsoft Office 365</h3>
+              <dl class="kv">
+                <div class="kv-row"><dt>เว็บไซต์</dt><dd><a href="https://office.com" target="_blank" rel="noopener">office.com</a></dd></div>
+                <div class="kv-row"><dt>Username</dt><dd>รหัสนักศึกษา<code>@lives.rmu.ac.th</code></dd></div>
+                <div class="kv-row"><dt>Password ครั้งแรก</dt><dd><code>rmuO</code> + เลขบัตรประชาชน<br><span style="color:var(--ink-2); font-size:14px">O เป็นตัวพิมพ์ใหญ่</span></dd></div>
+              </dl>
+            </div>
+            <div class="sub-card">
+              <h3>Google</h3>
+              <dl class="kv">
+                <div class="kv-row"><dt>เว็บไซต์</dt><dd><a href="https://google.com" target="_blank" rel="noopener">google.com</a></dd></div>
+                <div class="kv-row"><dt>Username</dt><dd>รหัสนักศึกษา<code>@rmu.ac.th</code></dd></div>
+                <div class="kv-row"><dt>Password ครั้งแรก</dt><dd><code>rmuG</code> + เลขบัตรประชาชน<br><span style="color:var(--ink-2); font-size:14px">G เป็นตัวพิมพ์ใหญ่</span></dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <h3 style="font-size:17px; margin:22px 0 14px">สำหรับบุคลากรใหม่</h3>
+          <div class="note">ระบบจะเปิดใช้งานได้เมื่อข้อมูลของท่านได้รับการบันทึกในระบบบุคลากรเรียบร้อยแล้ว</div>
+          <div class="sub-grid">
+            <div class="sub-card">
+              <h3>Microsoft Office 365</h3>
+              <dl class="kv">
+                <div class="kv-row"><dt>เว็บไซต์</dt><dd><a href="https://office.com" target="_blank" rel="noopener">office.com</a></dd></div>
+                <div class="kv-row"><dt>Username</dt><dd>ชื่ออังกฤษ.นามสกุล 2 ตัว<code>@lives.rmu.ac.th</code><br><span style="color:var(--ink-2); font-size:14px">ตัวอย่าง: phamonpri.su@lives.rmu.ac.th</span></dd></div>
+                <div class="kv-row"><dt>Password ครั้งแรก</dt><dd>เลขบัตรประชาชน</dd></div>
+              </dl>
+            </div>
+            <div class="sub-card">
+              <h3>Google</h3>
+              <dl class="kv">
+                <div class="kv-row"><dt>เว็บไซต์</dt><dd><a href="https://google.com" target="_blank" rel="noopener">google.com</a></dd></div>
+                <div class="kv-row"><dt>Username</dt><dd>ชื่ออังกฤษ.นามสกุล 2 ตัว<code>@rmu.ac.th</code><br><span style="color:var(--ink-2); font-size:14px">ตัวอย่าง: phamonpri.su@rmu.ac.th</span></dd></div>
+                <div class="kv-row"><dt>Password ครั้งแรก</dt><dd>เลขบัตรประชาชน</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <h3 style="font-size:17px; margin:22px 0 12px">ลืมรหัสผ่าน — รีเซตด้วยตนเอง</h3>
+          <ol class="steps">
+            <li>เข้าหน้าลงชื่อเข้าใช้ที่ <a href="https://office.com" target="_blank" rel="noopener">office.com</a> (Microsoft) หรือ <a href="https://google.com" target="_blank" rel="noopener">google.com</a> (Google)</li>
+            <li>คลิก “ลืมรหัสผ่าน” หรือ “Forgot password” ใต้ช่องกรอกรหัสผ่าน</li>
+            <li>กรอก Username แล้วเลือกยืนยันตัวตนผ่านอีเมลสำรอง หรือ SMS เบอร์โทรที่ลงทะเบียนไว้</li>
+            <li>กรอกรหัส OTP ที่ได้รับ แล้วตั้งรหัสผ่านใหม่</li>
+          </ol>
+
+          <div class="note"><b>ยังรีเซตเองไม่ได้?</b> แจ้งขอรีเซตรหัสผ่านออนไลน์ที่ <a href="https://ccservice.rmu.ac.th" target="_blank" rel="noopener">ccservice.rmu.ac.th</a> — ระบบนี้<b>ต้องเข้าสู่ระบบก่อน</b>จึงจะแจ้งเรื่องได้ หากเข้าสู่ระบบไม่ได้เลย ให้ติดต่อเจ้าหน้าที่ศูนย์เทคโนโลยีดิจิทัลและนวัตกรรมโดยตรง พร้อมแสดงบัตรนักศึกษาหรือบัตรประชาชนเพื่อยืนยันตัวตน<br>ระยะเวลาดำเนินการที่ศูนย์ฯ ประกาศไว้คือ 3–4 ชั่วโมงในวันและเวลาราชการ อาจล่าช้ากว่านี้ในช่วงที่มีผู้ใช้บริการจำนวนมาก</div>
+
+          <div class="note"><b>กันปัญหาไว้ก่อน:</b> หลังเข้าสู่ระบบครั้งแรก ให้ลงทะเบียนอีเมลสำรองและเบอร์โทรศัพท์ทันที จะรีเซตรหัสผ่านเองได้โดยไม่ต้องรอเจ้าหน้าที่</div>
+        </article>
+
+        <!-- ---------- gateway ---------- -->
+        <article class="guide-card" id="gateway">
+          <span class="tag">Access</span>
+          <h2>คู่มือการใช้งาน Authentication Gateway</h2>
+          <p>Authentication Gateway คือด่านแรกที่ควบคุมการเข้าถึงระบบสารสนเทศและบริการดิจิทัลของมหาวิทยาลัย ทำหน้าที่ตรวจสอบและยืนยันตัวตนผู้ใช้งานก่อนอนุญาตให้เข้าถึงทรัพยากรภายใน ไม่ว่าจะเป็นเว็บไซต์ แอปพลิเคชัน หรือฐานข้อมูล</p>
+
+          <div class="sub-grid">
+            <div class="sub-card">
+              <h3>สำหรับนักศึกษา</h3>
+              <dl class="kv">
+                <div class="kv-row"><dt>Username</dt><dd>รหัสนักศึกษา</dd></div>
+                <div class="kv-row"><dt>Password</dt><dd>เลขบัตรประจำตัวประชาชน</dd></div>
+              </dl>
+            </div>
+            <div class="sub-card">
+              <h3>สำหรับบุคลากร</h3>
+              <dl class="kv">
+                <div class="kv-row"><dt>Username</dt><dd>ชื่อภาษาอังกฤษ ตัวพิมพ์เล็กทั้งหมด</dd></div>
+                <div class="kv-row"><dt>Password</dt><dd>เลขบัตรประจำตัวประชาชน</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <ol class="steps">
+            <li>เชื่อมต่อเครือข่ายของมหาวิทยาลัย ระบบจะเด้งหน้าล็อกอินขึ้นมาอัตโนมัติ</li>
+            <li>หากไม่เด้ง ให้เปิดเบราว์เซอร์แล้วเข้า <a href="https://gateway.rmu.ac.th:1003/" target="_blank" rel="noopener">gateway.rmu.ac.th:1003</a></li>
+            <li>กรอก Username และ Password ตามตารางด้านบน แล้วกดเข้าสู่ระบบ</li>
+            <li>เมื่อยืนยันตัวตนผ่าน จะใช้งานอินเทอร์เน็ตและทรัพยากรภายในได้ตามสิทธิ์</li>
+          </ol>
+
+          <div class="note warn"><b>ข้อควรระวัง:</b> อย่าล็อกอินผ่านหน้าเว็บที่ไม่ใช่โดเมน <code>rmu.ac.th</code> และเลิกใช้งานทุกครั้งเมื่อใช้เครื่องสาธารณะ เพื่อป้องกันการถูกขโมยบัญชี</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>CYBER SECURITY RMU</h4>
+        <p style="margin:0; opacity:.85">ความมั่นคงปลอดภัยไซเบอร์<br>มหาวิทยาลัยราชภัฏมหาสารคาม</p>
+      </div>
+      <div>
+        <h4>คู่มือ</h4>
+        <ul>
+          <li><a href="#eduroam">eduroam</a></li>
+          <li><a href="#vpn">VPN</a></li>
+          <li><a href="#email">อีเมลมหาวิทยาลัย</a></li>
+          <li><a href="#gateway">Authentication Gateway</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ลิงก์ที่เกี่ยวข้อง</h4>
+        <ul>
+          <li><a href="https://www.ncsa.or.th/" target="_blank" rel="noopener">สกมช. (NCSA)</a></li>
+          <li><a href="https://cc.rmu.ac.th/" target="_blank" rel="noopener">ศูนย์เทคโนโลยีดิจิทัลและนวัตกรรม</a></li>
+          <li><a href="https://www.rmu.ac.th" target="_blank" rel="noopener">มหาวิทยาลัยราชภัฏมหาสารคาม</a></li>
+          <li><a href="index.html#contact">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2569 Cyber Security — มหาวิทยาลัยราชภัฏมหาสารคาม สงวนลิขสิทธิ์</div>
+  </div>
+</footer>
+</body>
+</html>

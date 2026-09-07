@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cyber Security">
+  <g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="#1a73c7" d="M32 8 52.8 20v24"/>
+    <path stroke="#d8232a" d="M52.8 44 32 56 11.2 44"/>
+    <path stroke="#f2b705" d="M11.2 44V20L32 8"/>
+  </g>
+  <path d="M27 33v-4.5a5 5 0 0 1 10 0V33" fill="none" stroke="#14171c" stroke-width="3.6" stroke-linecap="round"/>
+  <rect x="23.5" y="32" width="17" height="13.5" rx="2.6" fill="#14171c"/>
+  <circle cx="32" cy="37.4" r="1.9" fill="#ffffff"/>
+  <path d="M32 38.6v3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+</svg>
