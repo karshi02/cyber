@@ -24,9 +24,13 @@ imgs/               รูปบุคลากร
 
 คัดลอกทั้งโฟลเดอร์ขึ้น web root ได้เลย ไม่ต้อง build ไม่ต้องติดตั้งอะไร
 
-เว็บหลัก: **http://cyber.rmu.ac.th:3002/** — VPS `202.29.22.6` nginx ฟังพอร์ต `3002` (HTTP อย่างเดียว) เสิร์ฟจาก `/var/www/cyber`
+เว็บหลัก: **http://202.29.22.6:3002/** — VPS `202.29.22.6` nginx ฟังพอร์ต `3002` (HTTP อย่างเดียว) เสิร์ฟจาก `/var/www/cyber`
 
-ไม่มี HTTPS: firewall ของมหาวิทยาลัยไม่ให้ Let's Encrypt เข้ามายืนยันโดเมนได้ เว็บนี้เป็นหน้าประชาสัมพันธ์ ไม่มีฟอร์ม/ล็อกอิน จึงใช้ HTTP ได้ ผู้ใช้ต้องพิมพ์ `http://` และ `:3002` ให้ครบ ไม่อย่างนั้นเบราว์เซอร์จะอัปเกรดไป https แล้วเข้าไม่ได้
+ใช้ IP ไม่ใช้ `cyber.rmu.ac.th`: `rmu.ac.th` ส่ง HSTS `includeSubDomains` (1 ปี) เบราว์เซอร์ที่เคยเข้า rmu.ac.th จะบังคับ HTTPS กับทุก subdomain ทุกพอร์ต → `http://cyber.rmu.ac.th:3002` ขึ้น `ERR_SSL_PROTOCOL_ERROR` ส่วน HSTS ไม่มีผลกับ IP จึงเปิดผ่าน HTTP ได้
+
+ไม่มี HTTPS: firewall มหาวิทยาลัยไม่ให้ Let's Encrypt เข้ามายืนยันโดเมน เว็บเป็นหน้าประชาสัมพันธ์ ไม่มีฟอร์ม/ล็อกอิน จึงใช้ HTTP ได้
+
+ถ้าจะใช้ `cyber.rmu.ac.th` ต้องมี HTTPS เท่านั้น: ให้ศูนย์ฯ ตั้ง reverse proxy `https://cyber.rmu.ac.th` → `http://202.29.22.6:3002` หรือออกใบรับรองผ่าน DNS-01
 
 config: `/etc/nginx/sites-available/cyber` (`listen 3002`, บล็อก dotfiles)
 
@@ -42,7 +46,7 @@ deploy-cyber
 
 สำรอง: GitHub Pages https://karshi02.github.io/cyber/
 
-ถ้าย้ายโดเมน/พอร์ตอีก ต้องแก้ URL `http://cyber.rmu.ac.th:3002/` ทุกจุดต่อไปนี้:
+ถ้าย้ายโดเมน/พอร์ตอีก ต้องแก้ URL `http://202.29.22.6:3002/` ทุกจุดต่อไปนี้:
 
 - `<link rel="canonical">` และ `og:url` / `og:image` ในทั้ง 3 หน้า
 - `robots.txt` (บรรทัด Sitemap)

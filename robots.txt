@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://cyber.rmu.ac.th:3002/sitemap.xml
+Sitemap: http://202.29.22.6:3002/sitemap.xml
