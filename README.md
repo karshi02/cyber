@@ -24,7 +24,11 @@ imgs/               รูปบุคลากร
 
 คัดลอกทั้งโฟลเดอร์ขึ้น web root ได้เลย ไม่ต้อง build ไม่ต้องติดตั้งอะไร
 
-เว็บหลัก: **https://cyber.rmu.ac.th/** — VPS `202.29.22.6` (nginx) เสิร์ฟจาก `/var/www/cyber`
+เว็บหลัก: **http://cyber.rmu.ac.th:3002/** — VPS `202.29.22.6` nginx ฟังพอร์ต `3002` (HTTP อย่างเดียว) เสิร์ฟจาก `/var/www/cyber`
+
+ไม่มี HTTPS: firewall ของมหาวิทยาลัยไม่ให้ Let's Encrypt เข้ามายืนยันโดเมนได้ เว็บนี้เป็นหน้าประชาสัมพันธ์ ไม่มีฟอร์ม/ล็อกอิน จึงใช้ HTTP ได้ ผู้ใช้ต้องพิมพ์ `http://` และ `:3002` ให้ครบ ไม่อย่างนั้นเบราว์เซอร์จะอัปเกรดไป https แล้วเข้าไม่ได้
+
+config: `/etc/nginx/sites-available/cyber` (`listen 3002`, บล็อก dotfiles)
 
 อัปเดตเว็บ: push ขึ้น `main` แล้วรันบนเซิร์ฟเวอร์
 
@@ -32,11 +36,13 @@ imgs/               รูปบุคลากร
 deploy-cyber
 ```
 
-สคริปต์ `/usr/local/bin/deploy-cyber` ทำ `git pull --ff-only` ใน `/home/karshi02/cyber` → `rsync` ไป `/var/www/cyber` (ไม่เอา `.git`) → `nginx -t` + reload → ตรวจ HTTP status ทุกหน้า และตรวจว่า `/.git/config` ได้ 403
+สคริปต์ `/usr/local/bin/deploy-cyber` ทำ `git pull --ff-only` ใน `/home/karshi02/cyber` → `rsync` ไป `/var/www/cyber` (ไม่เอา `.git`) → `nginx -t` + reload → ตรวจ HTTP status ทุกหน้าที่ `127.0.0.1:3002` และตรวจว่า `/.git/config` ได้ 403
 
-สำรอง: GitHub Pages https://karshi02.github.io/cyber/ ยังเปิดไว้จนกว่า HTTPS บน `cyber.rmu.ac.th` จะใช้งานจากภายนอกได้ (รอศูนย์คอมฯ เปิด TCP 80/443 ขาเข้า)
+คนนอกมหาวิทยาลัยเข้าได้เมื่อศูนย์ฯ เปิด inbound TCP 3002 → 202.29.22.6
 
-ถ้าย้ายโดเมนอีก ต้องแก้ URL `https://cyber.rmu.ac.th/` ทุกจุดต่อไปนี้:
+สำรอง: GitHub Pages https://karshi02.github.io/cyber/
+
+ถ้าย้ายโดเมน/พอร์ตอีก ต้องแก้ URL `http://cyber.rmu.ac.th:3002/` ทุกจุดต่อไปนี้:
 
 - `<link rel="canonical">` และ `og:url` / `og:image` ในทั้ง 3 หน้า
 - `robots.txt` (บรรทัด Sitemap)
