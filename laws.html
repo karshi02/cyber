@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>กฎหมายที่เกี่ยวข้อง | CYBER SECURITY RMU</title>
+<meta name="description" content="สรุปกฎหมายด้านไซเบอร์ที่นักศึกษาและบุคลากรควรรู้: พ.ร.บ.คอมพิวเตอร์, PDPA, พ.ร.บ.ไซเบอร์, พ.ร.ก.อาชญากรรมทางเทคโนโลยี (บัญชีม้า), ธุรกรรมอิเล็กทรอนิกส์ และลิขสิทธิ์">
+<link rel="canonical" href="http://202.29.22.6:3002/laws.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="theme-color" content="#1a73c7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/components.css">
+<link rel="stylesheet" href="assets/theme.css">
+<script>
+  // apply the saved theme before first paint (no flash of the wrong theme)
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<script>
+  // set before first paint so the gate never flashes
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) document.documentElement.classList.add('gate');
+  })();
+</script>
+<script src="assets/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+<div id="gate" role="status" aria-label="กำลังเปิดกฎหมายที่เกี่ยวข้อง">
+  <div class="pane top"></div>
+  <div class="pane bot"></div>
+  <div class="core">
+    <div class="gate-box">
+      <svg class="gate-lock" viewBox="0 0 64 64" aria-hidden="true">
+        <path class="ring" d="M32 5 55 18v28L32 59 9 46V18z"/>
+        <path class="shackle" d="M25 33v-5a7 7 0 0 1 14 0v5"/>
+        <rect class="body" x="21" y="32" width="22" height="17" rx="3.4"/>
+        <circle class="keyhole" cx="32" cy="39" r="2.3"/>
+        <rect class="keyhole" x="31" y="40" width="2" height="5" rx="1"/>
+      </svg>
+      <p class="gate-title">กำลังเปิดกฎหมายที่เกี่ยวข้อง</p>
+      <p class="gate-sub" id="gateSub">verifying access</p>
+      <div class="gate-track"><i id="gateBar"></i></div>
+      <div class="gate-steps" id="gateSteps"><b></b><b></b><b></b><b></b></div>
+    </div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>โทร. 0-4372-2118 &nbsp;|&nbsp; cybersecurity@rmu.ac.th</span>
+    <nav class="topbar-links">
+      <a href="index.html#contact">ติดต่อเรา</a>
+    </nav>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img class="logo" src="favicon.svg" width="42" height="42" alt="โลโก้ Cyber Security RMU">
+      <div class="brand-text">
+        <b>CYBER SECURITY</b>
+        <span class="type" data-words="ความมั่นคงปลอดภัยไซเบอร์ · RMU|Cyber Security · RMU" aria-label="ความมั่นคงปลอดภัยไซเบอร์ · RMU"></span>
+      </div>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html">หน้าหลัก</a>
+      <a href="index.html#about">เกี่ยวกับเรา</a>
+      <a href="index.html#services">บริการ</a>
+      <a href="team.html">บุคลากร</a>
+      <a href="guides.html">คู่มือ</a>
+      <a href="laws.html" aria-current="page">กฎหมาย</a>
+      <a href="index.html#training">อบรม</a>
+      <a href="index.html#contact">ติดต่อ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="สลับโหมดมืด">
+      <span class="ico sun" aria-hidden="true">☀</span>
+      <span class="ico moon" aria-hidden="true">☾</span>
+      <span class="knob" aria-hidden="true" id="themeKnob">ON</span>
+      <span class="lbl" id="themeLabel">light</span>
+    </button>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-controls="menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">หน้าแรก</a><span class="sep">/</span><span class="here">กฎหมายที่เกี่ยวข้อง</span></div>
+      <h1>กฎหมายที่เกี่ยวข้อง</h1>
+      <p>สรุปกฎหมายด้านไซเบอร์และข้อมูลที่นักศึกษาและบุคลากรควรรู้ — การใช้คอมพิวเตอร์ ข้อมูลส่วนบุคคล ความมั่นคงปลอดภัยไซเบอร์ และการป้องกันอาชญากรรมทางเทคโนโลยี</p>
+    </div>
+  </section>
+
+  <section class="guide-section">
+    <div class="wrap guide-layout">
+
+      <nav class="guide-nav" aria-label="สารบัญกฎหมาย">
+        <a href="#computer-crime">1. พ.ร.บ.คอมพิวเตอร์</a>
+        <a href="#pdpa">2. PDPA</a>
+        <a href="#cybersecurity">3. พ.ร.บ.ไซเบอร์</a>
+        <a href="#tech-crime">4. พ.ร.ก.อาชญากรรมเทคโนโลยี</a>
+        <a href="#etransactions">5. ธุรกรรมอิเล็กทรอนิกส์</a>
+        <a href="#copyright">6. ลิขสิทธิ์</a>
+        <div class="track" aria-hidden="true"><i id="guideProgress"></i></div>
+      </nav>
+
+      <div>
+
+        <div class="note warn" style="margin-bottom:24px"><b>หมายเหตุ:</b> หน้านี้เป็นสรุปเพื่อการเรียนรู้และสร้างความตระหนักรู้ ไม่ใช่คำแนะนำทางกฎหมาย อัตราโทษที่แสดงเป็นอัตราสูงสุดตามตัวบท กรณีมีข้อสงสัยหรือเกิดเหตุจริง ให้ตรวจสอบตัวบทฉบับล่าสุดจากราชกิจจานุเบกษาหรือสำนักงานคณะกรรมการกฤษฎีกา และปรึกษาผู้เชี่ยวชาญ</div>
+
+        <!-- ---------- Computer Crime Act ---------- -->
+        <article class="guide-card" id="computer-crime">
+          <span class="tag">Computer Crime</span>
+          <h2>พ.ร.บ.ว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์ พ.ศ. 2550</h2>
+          <p>แก้ไขเพิ่มเติมโดย (ฉบับที่ 2) พ.ศ. 2560 กำหนดความผิดจากการใช้คอมพิวเตอร์ เช่น การเข้าถึงระบบโดยไม่ได้รับอนุญาต การดักรับข้อมูล การเผยแพร่ข้อมูลเท็จ และหน้าที่ของผู้ให้บริการในการเก็บข้อมูลจราจรทางคอมพิวเตอร์</p>
+
+          <div class="guide-meta">
+            <span class="chip">ทุกคน</span>
+            <span class="chip">ใช้บ่อยที่สุด</span>
+          </div>
+
+          <h3 style="font-size:17px; margin:0 0 12px">มาตราสำคัญ</h3>
+          <dl class="kv">
+            <div class="kv-row"><dt>มาตรา 5</dt><dd>เข้าถึงระบบคอมพิวเตอร์ที่มีมาตรการป้องกันโดยมิชอบ เช่น เดารหัสผ่านเข้าบัญชีผู้อื่น<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 6 เดือน หรือปรับไม่เกิน 10,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+            <div class="kv-row"><dt>มาตรา 7</dt><dd>เข้าถึงข้อมูลคอมพิวเตอร์ที่มีมาตรการป้องกันโดยมิชอบ<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 2 ปี หรือปรับไม่เกิน 40,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+            <div class="kv-row"><dt>มาตรา 8</dt><dd>ดักรับข้อมูลคอมพิวเตอร์ของผู้อื่นระหว่างการส่ง เช่น ดักจับรหัสผ่านบน Wi-Fi<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 3 ปี หรือปรับไม่เกิน 60,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+            <div class="kv-row"><dt>มาตรา 9</dt><dd>ทำให้ข้อมูลคอมพิวเตอร์ของผู้อื่นเสียหาย ถูกทำลาย แก้ไข หรือเปลี่ยนแปลง<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 5 ปี หรือปรับไม่เกิน 100,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+            <div class="kv-row"><dt>มาตรา 10</dt><dd>ทำให้ระบบคอมพิวเตอร์ของผู้อื่นทำงานไม่ได้ตามปกติ เช่น โจมตีให้ระบบล่ม<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 5 ปี หรือปรับไม่เกิน 100,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+            <div class="kv-row"><dt>มาตรา 14</dt><dd>นำเข้าสู่ระบบคอมพิวเตอร์ซึ่งข้อมูลปลอมหรือเท็จโดยทุจริตหรือหลอกลวง หรือข้อมูลที่กระทบความมั่นคง<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 5 ปี หรือปรับไม่เกิน 100,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+            <div class="kv-row"><dt>มาตรา 16</dt><dd>นำเข้าภาพผู้อื่นที่ถูกตัดต่อหรือดัดแปลง ทำให้ผู้นั้นเสียชื่อเสียง ถูกดูหมิ่น หรือได้รับความอับอาย<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 3 ปี และปรับไม่เกิน 200,000 บาท</span></dd></div>
+            <div class="kv-row"><dt>มาตรา 26</dt><dd>ผู้ให้บริการต้องเก็บข้อมูลจราจรทางคอมพิวเตอร์ (log) ไม่น้อยกว่า 90 วัน<br><span style="color:var(--ink-2); font-size:14px">ผู้ให้บริการที่ไม่ปฏิบัติตาม ปรับไม่เกิน 500,000 บาท</span></dd></div>
+          </dl>
+
+          <div class="note"><b>เกี่ยวกับมหาวิทยาลัยอย่างไร:</b> การใช้เครือข่าย Wi-Fi, VPN และ Authentication Gateway ของมหาวิทยาลัยถูกบันทึก log ตามมาตรา 26 การใช้บัญชีของผู้อื่น แชร์บัญชี หรือทดลองเจาะระบบโดยไม่ได้รับอนุญาต อาจเข้าข่ายความผิดตามมาตรา 5 และ 7 แม้จะอ้างว่า “แค่ลองดู”</div>
+        </article>
+
+        <!-- ---------- PDPA ---------- -->
+        <article class="guide-card" id="pdpa">
+          <span class="tag">Personal Data</span>
+          <h2>พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)</h2>
+          <p>คุ้มครองข้อมูลที่ระบุตัวบุคคลได้ เช่น ชื่อ เลขบัตรประชาชน รหัสนักศึกษา รูปถ่าย เบอร์โทร และข้อมูลสุขภาพ บังคับใช้เต็มรูปแบบตั้งแต่ 1 มิถุนายน 2565 ใช้กับหน่วยงานที่เก็บ ใช้ หรือเปิดเผยข้อมูลส่วนบุคคล รวมถึงมหาวิทยาลัย</p>
+
+          <div class="guide-meta">
+            <span class="chip">บุคลากร</span>
+            <span class="chip">ผู้ดูแลระบบ</span>
+            <span class="chip">อาจารย์ / ผู้วิจัย</span>
+          </div>
+
+          <h3 style="font-size:17px; margin:0 0 12px">ประเด็นสำคัญ</h3>
+          <dl class="kv">
+            <div class="kv-row"><dt>ฐานการประมวลผล</dt><dd>เก็บ ใช้ หรือเปิดเผยข้อมูลได้เมื่อมีฐานทางกฎหมาย เช่น ได้รับความยินยอม ปฏิบัติตามสัญญา หรือปฏิบัติหน้าที่ตามกฎหมาย และใช้เท่าที่จำเป็นตามวัตถุประสงค์ที่แจ้งไว้</dd></div>
+            <div class="kv-row"><dt>ข้อมูลอ่อนไหว</dt><dd>เชื้อชาติ ศาสนา ข้อมูลสุขภาพ ข้อมูลชีวภาพ (เช่น ลายนิ้วมือ ใบหน้า) ประวัติอาชญากรรม ต้องได้รับความยินยอมโดยชัดแจ้ง เว้นแต่มีข้อยกเว้นตามกฎหมาย</dd></div>
+            <div class="kv-row"><dt>สิทธิของเจ้าของข้อมูล</dt><dd>ขอเข้าถึง ขอสำเนา ขอแก้ไข ขอลบ ขอคัดค้าน และถอนความยินยอม</dd></div>
+            <div class="kv-row"><dt>ข้อมูลรั่วไหล</dt><dd>ผู้ควบคุมข้อมูลต้องแจ้งสำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (สคส.) ภายใน 72 ชั่วโมงนับแต่ทราบเหตุ หากมีความเสี่ยงต่อสิทธิเสรีภาพของบุคคล</dd></div>
+            <div class="kv-row"><dt>บทลงโทษ</dt><dd>โทษทางปกครอง ปรับสูงสุด 5 ล้านบาท · โทษอาญา จำคุกสูงสุด 1 ปี และ/หรือปรับสูงสุด 1 ล้านบาท · ค่าสินไหมทดแทนทางแพ่ง ศาลสั่งเพิ่มได้สูงสุด 2 เท่าของความเสียหายจริง</dd></div>
+          </dl>
+
+          <div class="note"><b>ในงานประจำวัน:</b> อย่าส่งไฟล์รายชื่อนักศึกษาพร้อมเลขบัตรประชาชนทางแชตกลุ่มหรืออีเมลส่วนตัว อย่าประกาศผลที่มีข้อมูลระบุตัวบุคคลเกินจำเป็นบนเว็บสาธารณะ และหากพบข้อมูลรั่วไหล ให้แจ้งหน่วยงานทันทีผ่านช่องทาง<a href="index.html#incident">แจ้งเหตุไซเบอร์</a> เพื่อให้ทันกรอบ 72 ชั่วโมง</div>
+        </article>
+
+        <!-- ---------- Cybersecurity Act ---------- -->
+        <article class="guide-card" id="cybersecurity">
+          <span class="tag">Cybersecurity</span>
+          <h2>พ.ร.บ.การรักษาความมั่นคงปลอดภัยไซเบอร์ พ.ศ. 2562</h2>
+          <p>วางกรอบการป้องกันและรับมือภัยคุกคามทางไซเบอร์ระดับประเทศ จัดตั้งสำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ (สกมช.) และกำหนดหน้าที่ของหน่วยงานของรัฐและหน่วยงานโครงสร้างพื้นฐานสำคัญทางสารสนเทศ</p>
+
+          <div class="guide-meta">
+            <span class="chip">หน่วยงานของรัฐ</span>
+            <span class="chip">ผู้ดูแลระบบ</span>
+          </div>
+
+          <h3 style="font-size:17px; margin:0 0 12px">ประเด็นสำคัญ</h3>
+          <dl class="kv">
+            <div class="kv-row"><dt>สกมช. (NCSA)</dt><dd>หน่วยงานกลางกำกับดูแล ออกมาตรฐานและแนวปฏิบัติ และประสานการรับมือเหตุภัยคุกคามทางไซเบอร์ของประเทศ</dd></div>
+            <div class="kv-row"><dt>ระดับภัยคุกคาม</dt><dd>แบ่งเป็น 3 ระดับ คือ ไม่ร้ายแรง · ร้ายแรง · วิกฤติ แต่ละระดับกำหนดอำนาจและมาตรการรับมือต่างกัน</dd></div>
+            <div class="kv-row"><dt>หน้าที่หน่วยงานของรัฐ</dt><dd>ต้องมีมาตรการรักษาความมั่นคงปลอดภัยไซเบอร์ตามประมวลแนวทางปฏิบัติและกรอบมาตรฐาน และรายงานเหตุภัยคุกคามต่อหน่วยงานกำกับดูแลและ สกมช.</dd></div>
+            <div class="kv-row"><dt>โครงสร้างพื้นฐานสำคัญ (CII)</dt><dd>หน่วยงานที่ให้บริการสำคัญ เช่น การเงิน พลังงาน สาธารณสุข โทรคมนาคม ต้องประเมินความเสี่ยงและตรวจสอบด้านความมั่นคงปลอดภัยตามรอบที่กำหนด</dd></div>
+          </dl>
+
+          <div class="note">ข้อมูลเพิ่มเติม มาตรฐาน และประกาศล่าสุด: <a href="https://www.ncsa.or.th/" target="_blank" rel="noopener">ncsa.or.th</a></div>
+        </article>
+
+        <!-- ---------- Technology crime decree ---------- -->
+        <article class="guide-card" id="tech-crime">
+          <span class="tag">Tech Crime</span>
+          <h2>พ.ร.ก.มาตรการป้องกันและปราบปรามอาชญากรรมทางเทคโนโลยี พ.ศ. 2566</h2>
+          <p>ออกมาเพื่อรับมือแก๊งคอลเซ็นเตอร์และการหลอกลวงออนไลน์ ให้ธนาคารและผู้ให้บริการโทรศัพท์ระงับธุรกรรมที่น่าสงสัยได้รวดเร็ว และกำหนดโทษผู้ที่เกี่ยวข้องกับ<b>บัญชีม้า</b>และ<b>ซิมม้า</b></p>
+
+          <div class="guide-meta">
+            <span class="chip">นักศึกษา</span>
+            <span class="chip">ความเสี่ยงสูง</span>
+          </div>
+
+          <h3 style="font-size:17px; margin:0 0 12px">ความผิดที่นักศึกษาถูกชักชวนบ่อย</h3>
+          <dl class="kv">
+            <div class="kv-row"><dt>เปิด / ให้ใช้บัญชี</dt><dd>เปิดบัญชีธนาคาร บัญชีอิเล็กทรอนิกส์ หรือหมายเลขโทรศัพท์ แล้วยอมให้ผู้อื่นนำไปใช้กระทำความผิด (“รับจ้างเปิดบัญชี”)<br><span style="color:var(--ink-2); font-size:14px">จำคุกไม่เกิน 3 ปี หรือปรับไม่เกิน 300,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+            <div class="kv-row"><dt>เป็นธุระจัดหา / ซื้อขาย</dt><dd>ซื้อ ขาย ให้เช่า ให้ยืม หรือโฆษณาชักชวนให้เปิดบัญชีหรือซิมเพื่อนำไปใช้กระทำความผิด<br><span style="color:var(--ink-2); font-size:14px">จำคุกตั้งแต่ 2 ปีถึง 5 ปี หรือปรับตั้งแต่ 200,000 บาทถึง 500,000 บาท หรือทั้งจำทั้งปรับ</span></dd></div>
+          </dl>
+
+          <div class="note warn"><b>อย่ารับจ้างเปิดบัญชีหรือให้ยืมบัญชี ไม่ว่าค่าจ้างเท่าไร</b> เงินที่ผ่านบัญชีม้ามักมาจากการหลอกลวงผู้เสียหายจริง เจ้าของบัญชีถูกดำเนินคดีได้แม้อ้างว่าไม่รู้ว่าเอาไปใช้ทำอะไร หากถูกหลอกเสียเงิน แจ้งธนาคารทันทีเพื่อระงับบัญชี และแจ้งความออนไลน์ที่ <a href="https://thaipoliceonline.go.th/" target="_blank" rel="noopener">thaipoliceonline.go.th</a> หรือโทร 1441</div>
+        </article>
+
+        <!-- ---------- Electronic transactions ---------- -->
+        <article class="guide-card" id="etransactions">
+          <span class="tag">E-Transactions</span>
+          <h2>พ.ร.บ.ว่าด้วยธุรกรรมทางอิเล็กทรอนิกส์ พ.ศ. 2544</h2>
+          <p>และที่แก้ไขเพิ่มเติม รับรองว่าข้อมูลอิเล็กทรอนิกส์และลายมือชื่ออิเล็กทรอนิกส์มีผลทางกฎหมาย ไม่ต่างจากเอกสารกระดาษ เป็นฐานของงานสารบรรณอิเล็กทรอนิกส์และการลงนามดิจิทัลในหน่วยงาน</p>
+
+          <dl class="kv">
+            <div class="kv-row"><dt>ข้อมูลอิเล็กทรอนิกส์</dt><dd>ห้ามปฏิเสธผลทางกฎหมายของข้อมูลเพียงเพราะอยู่ในรูปอิเล็กทรอนิกส์</dd></div>
+            <div class="kv-row"><dt>ลายมือชื่ออิเล็กทรอนิกส์</dt><dd>ใช้แทนการลงลายมือชื่อได้ เมื่อระบุตัวเจ้าของและแสดงเจตนาได้ด้วยวิธีที่เชื่อถือได้</dd></div>
+            <div class="kv-row"><dt>หน่วยงานกำกับ</dt><dd>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (สพธอ. / ETDA) — <a href="https://www.etda.or.th/" target="_blank" rel="noopener">etda.or.th</a></dd></div>
+          </dl>
+
+          <div class="note"><b>ในทางปฏิบัติ:</b> การส่งเอกสารราชการผ่านอีเมลมหาวิทยาลัยหรือระบบสารบรรณอิเล็กทรอนิกส์มีผลเป็นหลักฐาน จึงควรใช้บัญชีของมหาวิทยาลัย ไม่ใช้อีเมลส่วนตัว และห้ามให้ผู้อื่นใช้บัญชีแทน</div>
+        </article>
+
+        <!-- ---------- Copyright ---------- -->
+        <article class="guide-card" id="copyright">
+          <span class="tag">Copyright</span>
+          <h2>พ.ร.บ.ลิขสิทธิ์ พ.ศ. 2537</h2>
+          <p>และที่แก้ไขเพิ่มเติม คุ้มครองงานสร้างสรรค์ รวมถึง<b>โปรแกรมคอมพิวเตอร์</b> ตำรา บทความ รูปภาพ และสื่อการสอน</p>
+
+          <dl class="kv">
+            <div class="kv-row"><dt>ซอฟต์แวร์เถื่อน</dt><dd>ติดตั้ง ใช้ หรือแจกจ่ายโปรแกรมที่ไม่มีสิทธิ์ใช้งาน รวมถึงตัว crack หรือ keygen เป็นการละเมิดลิขสิทธิ์ และตัว crack มักแฝงมัลแวร์</dd></div>
+            <div class="kv-row"><dt>การใช้งานโดยชอบธรรม</dt><dd>ใช้เพื่อการศึกษา วิจัย หรือวิจารณ์ได้ในขอบเขตที่เหมาะสม โดยไม่ขัดต่อการแสวงหาประโยชน์ตามปกติของเจ้าของ และต้องอ้างอิงแหล่งที่มา</dd></div>
+            <div class="kv-row"><dt>ซอฟต์แวร์ของมหาวิทยาลัย</dt><dd>นักศึกษาและบุคลากรใช้ Microsoft 365 ผ่านบัญชีมหาวิทยาลัยได้ ดู<a href="guides.html#email">คู่มืออีเมลมหาวิทยาลัย</a></dd></div>
+          </dl>
+        </article>
+
+        <article class="guide-card">
+          <span class="tag">Sources</span>
+          <h2>แหล่งอ้างอิงตัวบท</h2>
+          <p>ตรวจสอบตัวบทฉบับเต็มและฉบับแก้ไขล่าสุดได้จากแหล่งทางการ</p>
+          <dl class="kv" style="margin-bottom:0">
+            <div class="kv-row"><dt>ราชกิจจานุเบกษา</dt><dd><a href="https://ratchakitcha.soc.go.th/" target="_blank" rel="noopener">ratchakitcha.soc.go.th</a></dd></div>
+            <div class="kv-row"><dt>สำนักงานคณะกรรมการกฤษฎีกา</dt><dd><a href="https://www.krisdika.go.th/" target="_blank" rel="noopener">krisdika.go.th</a></dd></div>
+            <div class="kv-row"><dt>สกมช. (NCSA)</dt><dd><a href="https://www.ncsa.or.th/" target="_blank" rel="noopener">ncsa.or.th</a></dd></div>
+            <div class="kv-row"><dt>สคส. (PDPC)</dt><dd><a href="https://www.pdpc.or.th/" target="_blank" rel="noopener">pdpc.or.th</a></dd></div>
+            <div class="kv-row"><dt>สพธอ. (ETDA)</dt><dd><a href="https://www.etda.or.th/" target="_blank" rel="noopener">etda.or.th</a></dd></div>
+          </dl>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>CYBER SECURITY RMU</h4>
+        <p style="margin:0; opacity:.85">ความมั่นคงปลอดภัยไซเบอร์<br>มหาวิทยาลัยราชภัฏมหาสารคาม</p>
+      </div>
+      <div>
+        <h4>กฎหมาย</h4>
+        <ul>
+          <li><a href="#computer-crime">พ.ร.บ.คอมพิวเตอร์</a></li>
+          <li><a href="#pdpa">PDPA</a></li>
+          <li><a href="#tech-crime">บัญชีม้า / ซิมม้า</a></li>
+          <li><a href="guides.html">คู่มือการใช้งาน</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ลิงก์ที่เกี่ยวข้อง</h4>
+        <ul>
+          <li><a href="https://www.ncsa.or.th/" target="_blank" rel="noopener">สกมช. (NCSA)</a></li>
+          <li><a href="https://cc.rmu.ac.th/" target="_blank" rel="noopener">ศูนย์เทคโนโลยีดิจิทัลและนวัตกรรม</a></li>
+          <li><a href="https://www.rmu.ac.th" target="_blank" rel="noopener">มหาวิทยาลัยราชภัฏมหาสารคาม</a></li>
+          <li><a href="index.html#contact">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2569 Cyber Security — มหาวิทยาลัยราชภัฏมหาสารคาม สงวนลิขสิทธิ์</div>
+  </div>
+</footer>
+</body>
+</html>
