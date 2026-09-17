@@ -24,7 +24,9 @@ imgs/               รูปบุคลากร
 
 คัดลอกทั้งโฟลเดอร์ขึ้น web root ได้เลย ไม่ต้อง build ไม่ต้องติดตั้งอะไร
 
-ก่อน deploy จริง **ต้องแก้โดเมนให้ตรงของจริง** ตอนนี้ใส่ไว้เป็น `https://cybersecurity.rmu.ac.th/`:
+ปัจจุบัน deploy บน **GitHub Pages** → https://karshi02.github.io/cyber/ (branch `main`, โฟลเดอร์ root) push ขึ้น `main` แล้ว Pages build ใหม่เองภายใน ~1 นาที
+
+ถ้าย้ายไปโดเมนมหาวิทยาลัย ต้องแก้ URL `https://karshi02.github.io/cyber/` ทุกจุดต่อไปนี้:
 
 - `<link rel="canonical">` และ `og:url` / `og:image` ในทั้ง 3 หน้า
 - `robots.txt` (บรรทัด Sitemap)

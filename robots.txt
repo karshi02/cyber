@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cybersecurity.rmu.ac.th/sitemap.xml
+Sitemap: https://karshi02.github.io/cyber/sitemap.xml
