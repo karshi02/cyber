@@ -24,9 +24,19 @@ imgs/               รูปบุคลากร
 
 คัดลอกทั้งโฟลเดอร์ขึ้น web root ได้เลย ไม่ต้อง build ไม่ต้องติดตั้งอะไร
 
-ปัจจุบัน deploy บน **GitHub Pages** → https://karshi02.github.io/cyber/ (branch `main`, โฟลเดอร์ root) push ขึ้น `main` แล้ว Pages build ใหม่เองภายใน ~1 นาที
+เว็บหลัก: **https://cyber.rmu.ac.th/** — VPS `202.29.22.6` (nginx) เสิร์ฟจาก `/var/www/cyber`
 
-ถ้าย้ายไปโดเมนมหาวิทยาลัย ต้องแก้ URL `https://karshi02.github.io/cyber/` ทุกจุดต่อไปนี้:
+อัปเดตเว็บ: push ขึ้น `main` แล้วรันบนเซิร์ฟเวอร์
+
+```bash
+deploy-cyber
+```
+
+สคริปต์ `/usr/local/bin/deploy-cyber` ทำ `git pull --ff-only` ใน `/home/karshi02/cyber` → `rsync` ไป `/var/www/cyber` (ไม่เอา `.git`) → `nginx -t` + reload → ตรวจ HTTP status ทุกหน้า และตรวจว่า `/.git/config` ได้ 403
+
+สำรอง: GitHub Pages https://karshi02.github.io/cyber/ ยังเปิดไว้จนกว่า HTTPS บน `cyber.rmu.ac.th` จะใช้งานจากภายนอกได้ (รอศูนย์คอมฯ เปิด TCP 80/443 ขาเข้า)
+
+ถ้าย้ายโดเมนอีก ต้องแก้ URL `https://cyber.rmu.ac.th/` ทุกจุดต่อไปนี้:
 
 - `<link rel="canonical">` และ `og:url` / `og:image` ในทั้ง 3 หน้า
 - `robots.txt` (บรรทัด Sitemap)
